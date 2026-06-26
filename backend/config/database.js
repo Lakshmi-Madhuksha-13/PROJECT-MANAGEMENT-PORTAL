@@ -19,13 +19,37 @@ const createMySQL = () => new Sequelize(database, username, password, {
   },
 });
 
+const createPostgres = (url) => new Sequelize(url, {
+  dialect: 'postgres',
+  logging: false,
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false,
+    },
+  },
+});
+
 const createSQLite = () => new Sequelize({
   dialect: 'sqlite',
-  storage: process.env.SQLITE_STORAGE || 'database.sqlite',
+  storage: process.env.SQLITE_STORAGE || process.env.VERCEL ? '/tmp/database.sqlite' : 'database.sqlite',
   logging: false,
 });
 
 export const initializeDatabase = async () => {
+  if (process.env.DATABASE_URL) {
+    try {
+      console.log('Connecting to database via DATABASE_URL...');
+      const isPostgres = process.env.DATABASE_URL.startsWith('postgres');
+      const db = isPostgres ? createPostgres(process.env.DATABASE_URL) : new Sequelize(process.env.DATABASE_URL, { logging: false });
+      await db.authenticate();
+      console.log(`Connected to database via DATABASE_URL (${isPostgres ? 'PostgreSQL' : 'default'})`);
+      return db;
+    } catch (error) {
+      console.warn('Connection via DATABASE_URL failed, falling back to other connection methods.', error.message);
+    }
+  }
+
   const mysql = createMySQL();
   try {
     console.log(`Connecting to MySQL ${username}@${host}:${port}/${database}`);

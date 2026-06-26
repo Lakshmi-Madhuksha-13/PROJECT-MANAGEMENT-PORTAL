@@ -1,0 +1,13 @@
+{
+  "name": "projectnest",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace frontend",
+    "start": "npm run start --workspace backend"
+  }
+}

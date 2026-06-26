@@ -63,6 +63,49 @@ This starts the Vite development server for the React app.
 - `npm run build` — builds the frontend for production
 - `npm run preview` — serves the built frontend locally
 
+## Deployment
+
+### Deploy locally
+
+1. Install backend dependencies:
+   ```bash
+   cd backend
+   npm install
+   ```
+2. Install frontend dependencies:
+   ```bash
+   cd ../frontend
+   npm install
+   ```
+3. Run the backend:
+   ```bash
+   cd backend
+   npm start
+   ```
+4. Run the frontend:
+   ```bash
+   cd frontend
+   npm run dev
+   ```
+
+### Deploy to Vercel
+
+This repository is configured for Vercel deployment. The frontend is hosted as a static app, and the Express API is available under `/api`.
+
+From the project root:
+
+```bash
+vercel --prod
+```
+
+> If you want to deploy only the frontend, use `cd frontend && vercel --prod`.
+
+### Vercel notes
+
+- The frontend will use `VITE_API_BASE_URL` if provided, otherwise requests to `/api` will be proxied to the same origin.
+- The backend currently falls back to SQLite if MySQL is unavailable, so Vercel deployment will work for a demo but is not ideal for persistent production storage.
+- Add backend environment variables in Vercel if you want to configure database credentials, JWT secrets, or CORS origins.
+
 ## Notes
 
 - The backend currently uses SQLite for local development and includes Sequelize models for Users, Projects, Tasks, and Notifications.
@@ -71,4 +114,4 @@ This starts the Vite development server for the React app.
 
 ## GitHub
 
-This repository is connected to the remote `https://github.com/Lakshmi-Madhuksha-13/PROJECT-MANAGEMENT-PORTAL.git`.
+This repository is connected to `https://github.com/Lakshmi-Madhuksha-13/PROJECT-MANAGEMENT-PORTAL.git`.

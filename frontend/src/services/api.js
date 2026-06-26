@@ -1,9 +1,11 @@
 import axios from 'axios';
 
-const apiHost = window.location.hostname;
-const apiPort = 5000;
+const defaultApiBaseUrl = window.location.hostname === 'localhost'
+  ? 'http://localhost:5000/api'
+  : '/api';
+
 export const api = axios.create({
-  baseURL: `${window.location.protocol}//${apiHost}:${apiPort}/api`,
+  baseURL: import.meta.env.VITE_API_BASE_URL || defaultApiBaseUrl,
   headers: { 'Content-Type': 'application/json' },
 });
 
