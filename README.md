@@ -1,117 +1,454 @@
-# ProjectNest / Project Management Portal
+# 🚀 ProjectNest – Smart Project Management Portal
 
-A full-stack project management portal built with React + Vite on the frontend and Node.js + Express + Sequelize on the backend.
+<p align="center">
+  <h3 align="center">📋 Plan • 🚀 Organize • 🤝 Collaborate • 📈 Deliver</h3>
+  <p align="center">
+    A modern full-stack Project Management Portal built with <strong>React + Vite</strong> and <strong>Node.js + Express</strong>, designed to simplify project planning, task tracking, and team productivity through an elegant and interactive user experience.
+  </p>
+</p>
 
-## Overview
+---
 
-The application provides:
-- Authentication and protected routes
-- Dashboard with recent projects, tasks, and activity
-- Projects and tasks management flows
-- Notifications, reports, calendar, and settings pages
-- Light / dark theme support with persistent preferences
-- Animated landing page and smooth route transitions
+## 🌐 Live Demo
 
-## Folder Structure
+> ### 🚀 Experience ProjectNest Online
+>
+> **🔗 Live Website:**
+> https://projectnest-one.vercel.app/
 
-- `frontend/` — React application using Vite, Tailwind CSS, Framer Motion, and React Router
-- `backend/` — Express API using Sequelize with SQLite fallback and API routes for auth, projects, tasks, reports, and notifications
+---
 
-## Getting Started
+# 💻 Local Development
 
-### Prerequisites
+Run the project locally using the following URLs:
 
-- Node.js 18+ recommended
-- npm
+### 🖥 Frontend
 
-### Install dependencies
+| Type        | URL                     |
+| ----------- | ----------------------- |
+| **Local**   | http://localhost:306/   |
+| **Network** | http://10.50.53.73:306/ |
+
+### ⚙ Backend API
+
+```
+http://localhost:5000/
+```
+
+> **Tip:** Anyone connected to the same network can access the application using the Network URL.
+
+---
+
+# 📖 About ProjectNest
+
+**ProjectNest** is a beautifully designed Project Management Portal that empowers individuals, students, and development teams to organize projects efficiently, monitor task progress, collaborate seamlessly, and visualize productivity through an intuitive dashboard.
+
+With secure authentication, responsive layouts, interactive dashboards, animated transitions, and modern UI components, ProjectNest delivers a professional project management experience suitable for academic projects, personal productivity, and collaborative development.
+
+---
+
+# ✨ Key Features
+
+## 🔐 Secure Authentication
+
+* User Registration
+* Secure Login
+* JWT Authentication
+* Protected Routes
+* Persistent Sessions
+* Logout Functionality
+
+---
+
+## 📊 Smart Dashboard
+
+* Interactive Dashboard
+* Recent Projects
+* Active Tasks
+* Pending Tasks
+* Project Statistics
+* Activity Timeline
+* Productivity Overview
+
+---
+
+## 📁 Project Management
+
+* Create Projects
+* Update Projects
+* Delete Projects
+* Search Projects
+* Project Status Tracking
+* Project Progress Monitoring
+
+---
+
+## ✅ Task Management
+
+* Create Tasks
+* Edit Tasks
+* Delete Tasks
+* Set Priorities
+* Due Date Management
+* Task Completion Tracking
+* Project-wise Task Organization
+
+---
+
+## 📅 Calendar
+
+* Deadline Tracking
+* Schedule Planning
+* Upcoming Tasks
+* Calendar View
+
+---
+
+## 🔔 Notifications
+
+* Task Updates
+* Project Notifications
+* Deadline Alerts
+* Activity Notifications
+
+---
+
+## 📈 Reports & Analytics
+
+* Project Progress Reports
+* Task Completion Statistics
+* Productivity Metrics
+* Performance Overview
+
+---
+
+## ⚙ Settings
+
+* User Profile
+* Theme Preferences
+* Account Settings
+* Personalized Experience
+
+---
+
+## 🎨 User Experience
+
+* Beautiful Landing Page
+* Fully Responsive Design
+* Animated Components
+* Smooth Route Transitions
+* Light Theme
+* Dark Theme
+* Persistent Theme Preference
+* Professional UI
+* Clean Navigation
+
+---
+
+# 🚀 Why Choose ProjectNest?
+
+✔ Modern and Responsive Interface
+
+✔ Secure Authentication System
+
+✔ Beautiful Animated User Experience
+
+✔ Easy Project Organization
+
+✔ Efficient Task Management
+
+✔ Productivity Dashboard
+
+✔ Mobile-Friendly Layout
+
+✔ Lightweight and Fast
+
+✔ Full-Stack Architecture
+
+✔ Easy Deployment on Vercel
+
+---
+
+# 🛠 Technology Stack
+
+## 🎨 Frontend
+
+* React
+* Vite
+* Tailwind CSS
+* React Router DOM
+* Framer Motion
+* Axios
+
+---
+
+## ⚙ Backend
+
+* Node.js
+* Express.js
+* Sequelize ORM
+* SQLite
+* MySQL (Optional)
+
+---
+
+## 🔒 Authentication
+
+* JWT
+* bcrypt
+
+---
+
+# 📂 Project Structure
+
+```text
+PROJECT-MANAGEMENT-PORTAL
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── context/
+│   │   ├── assets/
+│   │   └── App.jsx
+│   │
+│   ├── package.json
+│   └── vite.config.js
+│
+├── backend/
+│   ├── config/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── controllers/
+│   ├── server.js
+│   └── package.json
+│
+├── vercel.json
+├── README.md
+└── .gitignore
+```
+
+---
+
+# ⚙ Installation
+
+## 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/Lakshmi-Madhuksha-13/PROJECT-MANAGEMENT-PORTAL.git
+
+cd PROJECT-MANAGEMENT-PORTAL
+```
+
+---
+
+## 2️⃣ Install Backend
 
 ```bash
 cd backend
 npm install
+```
 
+---
+
+## 3️⃣ Install Frontend
+
+```bash
 cd ../frontend
 npm install
 ```
 
-### Run the backend
+---
+
+# ▶ Running the Application
+
+## Start Backend
 
 ```bash
 cd backend
 npm start
 ```
 
-This starts the API server using `server.js`.
+or
 
-### Run the frontend
+```bash
+npm run dev
+```
+
+---
+
+## Start Frontend
 
 ```bash
 cd frontend
 npm run dev
 ```
 
-This starts the Vite development server for the React app.
+---
 
-## Available Scripts
+# 📜 Available Scripts
 
-### Backend
-- `npm start` — starts Express server
-- `npm run dev` — starts Express server with `nodemon`
+## Backend
 
-### Frontend
-- `npm run dev` — starts Vite development server
-- `npm run build` — builds the frontend for production
-- `npm run preview` — serves the built frontend locally
+| Command       | Description                       |
+| ------------- | --------------------------------- |
+| `npm start`   | Start Express Server              |
+| `npm run dev` | Start Express Server with Nodemon |
 
-## Deployment
+---
 
-### Deploy locally
+## Frontend
 
-1. Install backend dependencies:
-   ```bash
-   cd backend
-   npm install
-   ```
-2. Install frontend dependencies:
-   ```bash
-   cd ../frontend
-   npm install
-   ```
-3. Run the backend:
-   ```bash
-   cd backend
-   npm start
-   ```
-4. Run the frontend:
-   ```bash
-   cd frontend
-   npm run dev
-   ```
+| Command           | Description                   |
+| ----------------- | ----------------------------- |
+| `npm run dev`     | Start Vite Development Server |
+| `npm run build`   | Production Build              |
+| `npm run preview` | Preview Production Build      |
 
-### Deploy to Vercel
+---
 
-This repository is configured for Vercel deployment. The frontend is hosted as a static app, and the Express API is available under `/api`.
+# 🌍 Deployment
 
-From the project root:
+ProjectNest is successfully deployed on **Vercel**.
+
+### Live Website
+
+**https://projectnest-one.vercel.app/**
+
+Deploy manually anytime using:
 
 ```bash
 vercel --prod
 ```
 
-> If you want to deploy only the frontend, use `cd frontend && vercel --prod`.
+---
 
-### Vercel notes
+# 🔐 Environment Variables
 
-- The frontend will use `VITE_API_BASE_URL` if provided, otherwise requests to `/api` will be proxied to the same origin.
-- The backend currently falls back to SQLite if MySQL is unavailable, so Vercel deployment will work for a demo but is not ideal for persistent production storage.
-- Add backend environment variables in Vercel if you want to configure database credentials, JWT secrets, or CORS origins.
+Backend `.env`
 
-## Notes
+```env
+PORT=5000
 
-- The backend currently uses SQLite for local development and includes Sequelize models for Users, Projects, Tasks, and Notifications.
-- The frontend includes a theme context, auth context, and animated app routes for a polished user experience.
-- Add a `.env` file in the backend if you want to configure JWT secrets, database credentials, or other production settings.
+JWT_SECRET=your_secret_key
 
-## GitHub
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=your_password
+DB_NAME=project_management
+```
 
-This repository is connected to `https://github.com/Lakshmi-Madhuksha-13/PROJECT-MANAGEMENT-PORTAL.git`.
+Frontend `.env`
+
+```env
+VITE_API_BASE_URL=http://localhost:5000/api
+```
+
+---
+
+# 🗄 Database
+
+Development
+
+* SQLite
+
+Production (Optional)
+
+* MySQL
+
+The application automatically switches to SQLite whenever MySQL is unavailable, making development simple while supporting scalable production deployment.
+
+---
+
+# 🎯 Upcoming Features
+
+* 🤖 AI Task Suggestions
+* 📎 File Upload Support
+* 👥 Team Collaboration
+* 💬 Project Discussions
+* 📧 Email Notifications
+* 📌 Kanban Board
+* 📊 Gantt Charts
+* 🔄 Drag & Drop Tasks
+* 📱 Progressive Web App
+* 🌍 Multi-language Support
+
+---
+
+# 📸 Application Preview
+
+> Add screenshots below after deployment.
+
+* 🏠 Landing Page
+* 📊 Dashboard
+* 📁 Projects
+* ✅ Tasks
+* 📅 Calendar
+* 📈 Reports
+* ⚙ Settings
+
+---
+
+# 🤝 Contributing
+
+Contributions are always welcome!
+
+```bash
+Fork 🍴
+
+Clone 📥
+
+Create a Branch 🌿
+
+Commit Changes ✅
+
+Push 🚀
+
+Open a Pull Request 🎉
+```
+
+---
+
+# 📄 License
+
+This project is developed for educational and learning purposes.
+
+---
+
+# 👨‍💻 Developer
+
+**Madhuksha Lakshmi**
+
+### 📂 GitHub Repository
+
+https://github.com/Lakshmi-Madhuksha-13/PROJECT-MANAGEMENT-PORTAL
+
+### 🌐 Live Website
+
+https://projectnest-one.vercel.app/
+
+---
+
+# ⭐ Support the Project
+
+If you found **ProjectNest** useful,
+
+🌟 **Star the repository**
+
+🍴 **Fork it**
+
+💡 **Share your feedback**
+
+🤝 **Contribute new features**
+
+---
+
+<p align="center">
+
+### 🚀 "Transforming Ideas into Successfully Managed Projects."
+
+**Made with ❤️ using React, Vite, Express, Node.js & Tailwind CSS**
+
+</p>
