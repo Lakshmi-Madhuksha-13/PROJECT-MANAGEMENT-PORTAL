@@ -452,4 +452,4 @@ If you found **ProjectNest** useful,
 **Made with ❤️ using React, Vite, Express, Node.js & Tailwind CSS**
 
 </p>
-(https://projectnest-one.vercel.app/)
+(https://projectnest-one.vercel.app/)]
